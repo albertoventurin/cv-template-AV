@@ -1,0 +1,94 @@
+---
+title: "CV"
+author: "Author"
+output: 
+  pdf_document:
+    latex_engine: pdflatex
+    template: template.tex
+    keep_tex: true
+fontawesome: yes
+email: email
+github: github
+institution: "Institution"
+instadd: "institution address"
+phone: "phone number"
+---
+<!-- NOTE: Commands -->
+
+<!-- \sh : subheading -->
+<!-- \ssh : subsubheading -->
+<!-- \ri : item -->
+<!-- \rsi : subitem -->
+
+```{r setup, include=F}
+library(tidyverse)
+source("cv_functions.R")
+ref <- read_tsv("references.csv")
+dt <- read_tsv("entries.csv")
+knitr::opts_chunk$set(echo=F,warning=F,message=F,results = "asis")
+```
+
+# Research interests
+
+Your research interests
+
+# References
+
+```{r ref}
+ref %>%
+  print_ref() %>% cat()
+```
+
+# Graduate Studies
+
+```{r}
+print_entries(dt,"graduate","item") %>% cat()
+```
+
+# Undergraduate Studies
+
+```{r}
+print_entries(dt,"undergraduate","item") %>% cat()
+```
+
+# Teaching Experience
+
+```{r}
+print_entries(dt,"teaching","text") %>% cat()
+```
+
+# Work Experience
+
+```{r}
+print_entries(dt,"work","text") %>% cat()
+```
+
+
+# Languages and technical skills
+
+- __Languages__: Italian (native), English (Full proficiency), Spanish (basic) 
+
+- __Software__: MS Office, \LaTeX, Bloomberg, Datastream 
+
+- __Programming__: _Advanced_ : R, RStudio, Stata, Julia, Python, Matlab; _Intermediate_: SQL
+
+
+# Conferences and seminars
+
+```{r}
+print_entries(dt,"conferences","text") %>% cat()
+```
+
+
+# Grants and awards
+
+```{r}
+print_entries(dt,"grants","text") %>% cat()
+```
+
+
+# Ongoing projects
+
+```{r}
+print_entries(dt,"research","text") %>%  cat()
+```

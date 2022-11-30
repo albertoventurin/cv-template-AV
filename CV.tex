@@ -1,0 +1,209 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{ragged2e}
+\usepackage{fontawesome}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Overwrite itemize behavior
+\let\olditemize\itemize
+\setitemize{leftmargin=0.15in, label={}}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\ri}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\sh}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\ssh}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\ph}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\rsi}[1]{\ri{#1}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+ \begin{center}
+      \textbf{ \textsc{\Large \color{black} Author}} \\
+       \smallskip
+       \small{Institution}\\
+       \small{institution address}\\
+       \Telefon\ phone number  \enspace
+       \Letter\ email\enspace 
+       \faGithub\ \href{https://github.com/github}{github}\enspace
+       
+   \end{center} 
+   
+%\begin{center}
+%    \textbf{\Huge \scshape Author} \\ \vspace{1pt}
+%    \small phone number $|$ email $|$ 
+%    \href{}{\underline{linkedin.com/in/jake}} $|$
+%    \href{https://github.com/github }{\underline{github}}
+%\end{center}
+
+\hypertarget{research-interests}{%
+\section{Research interests}\label{research-interests}}
+
+Your research interests
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begin{tabular*}{\textwidth}{l@{\extracolsep{0.03\textwidth}}p{0.32\textwidth}p{0.32\textwidth}p{0.32\textwidth}}
+&\textbf{\href{https://en.wikipedia.org/wiki/Leonardo_da_Vinci}{\textbf{\color{black}Leonardo da Vinci}}}&\textbf{\href{https://en.wikipedia.org/wiki/Marie_Curie}{\textbf{\color{black}Marie Curie}}}&\textbf{\href{www.somewhere.org}{\textbf{\color{black}Cool Person}}}\\ & The Medici Family&Ecole Normale Superieure&institution\\ & Piazza San Marco&-&Address line 1\\ & Florence&Paris&Address line 2\\ & Florence 50014, Italy&-&Address line 3\\ & leodavinci@medici.com&mariecurie@epcp.eu&person@emailprovider.domain\\
+\end{tabular*}
+
+\hypertarget{graduate-studies}{%
+\section{Graduate Studies}\label{graduate-studies}}
+
+\begin{itemize}
+\item
+ \sh{Some graduate uni}{somewhere}{PhD candidate in all the awesome things}{2020 – present}\begin{itemize}
+\item Supervisors: Leonardo Da Vinci and Marie Curie
+\end{itemize} \end{itemize}
+
+\hypertarget{undergraduate-studies}{%
+\section{Undergraduate Studies}\label{undergraduate-studies}}
+
+\begin{itemize}
+\item
+ \sh{Some undergraduate}{somewhere else}{Master of Science in cool things}{2016 – 2018}\begin{itemize}
+\item they were very cool things
+\end{itemize}
+\item
+\sh{A place I went to in erasmus}{by the beach}{erasmus program}{Spring semester 2016}\empty \end{itemize}
+
+\hypertarget{teaching-experience}{%
+\section{Teaching Experience}\label{teaching-experience}}
+
+\begin{itemize}
+\item
+ \sh{Data analysis}{at this level}{short description}{Spring 2023}\justify{{\small{Some more detailed description}}} \end{itemize}
+
+\hypertarget{work-experience}{%
+\section{Work Experience}\label{work-experience}}
+
+\begin{itemize}
+\item
+ \sh{Position – institution}{some nice place}{in this department}{June 2019 - December 2019}\justify{{\small{summary of responsibilities}}}
+\item
+\sh{Trainee – institution}{somewhere in the world}{in this department}{July 2018 - June 2019}\justify{{\small{main description of what I did}}} \end{itemize}
+
+\hypertarget{languages-and-technical-skills}{%
+\section{Languages and technical
+skills}\label{languages-and-technical-skills}}
+
+\begin{itemize}
+\item
+  \textbf{Languages}: Italian (native), English (Full proficiency),
+  Spanish (basic)
+\item
+  \textbf{Software}: MS Office, \LaTeX, Bloomberg, Datastream
+\item
+  \textbf{Programming}: \emph{Advanced} : R, RStudio, Stata, Julia,
+  Python, Matlab; \emph{Intermediate}: SQL
+\end{itemize}
+
+\hypertarget{conferences-and-seminars}{%
+\section{Conferences and seminars}\label{conferences-and-seminars}}
+
+\begin{itemize}
+\item
+ \sh{This very cool conference}{in some cool place}{a short description}{in this period}\empty \end{itemize}
+
+\hypertarget{grants-and-awards}{%
+\section{Grants and awards}\label{grants-and-awards}}
+
+\begin{itemize}
+\item
+ \sh{I got some money}{\empty}{from this people}{2020}\justify{{\small{for this reason}}} \end{itemize}
+
+\hypertarget{ongoing-projects}{%
+\section{Ongoing projects}\label{ongoing-projects}}
+
+\begin{itemize}
+\item
+ \sh{Title of my project}{\empty}{with some other very nice people}{\empty}\justify{{\small{a short description of my project}}}
+\item
+\sh{Title of another project I do alone}{\empty}{\empty}{\empty}\justify{{\small{another short description}}} \end{itemize}
+
+\end{document}
